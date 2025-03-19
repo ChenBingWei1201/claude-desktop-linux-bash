@@ -738,6 +738,13 @@ process_asar() {
         log_error "Failed to copy tray icons"
         exit 1
     }
+
+    # Copy i18n folder
+    mkdir -p app.asar.contents/resources/i18n
+    cp "$WORK_DIR/lib/net45/resources/"*".json" app.asar.contents/resources/i18n/ || {
+        log_error "Failed to copy i18n folder"
+        exit 1
+    }
     
     # Repackage app.asar
     npx asar pack app.asar.contents app.asar || {

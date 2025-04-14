@@ -14,7 +14,7 @@
 set -euo pipefail
 
 # Configuration
-CLAUDE_VERSION="0.7.8"  # Updated to match current version
+CLAUDE_VERSION="0.9.2"  # Updated to match current version
 CLAUDE_URL="https://storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest-win-x64/Claude-Setup-x64.exe"
 WORK_DIR="$(pwd)/claude-build"
 OUTPUT_DIR="$(pwd)/claude-desktop"

@@ -766,6 +766,8 @@ Type=Application
 Terminal=false
 Categories=Office;Utility;
 MimeType=x-scheme-handler/claude
+StartupWMClass=Claude
+StartupNotify=true
 EOF
 }
 

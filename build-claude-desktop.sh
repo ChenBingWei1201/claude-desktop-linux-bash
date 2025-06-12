@@ -780,7 +780,11 @@ create_launcher() {
     cat > "$OUTPUT_DIR/bin/claude-desktop" << EOF
 #!/bin/bash
 electron "$APP_DIR/lib/claude-desktop/app.asar" \
-    \${WAYLAND_DISPLAY:+--ozone-platform-hint=auto --enable-features=WaylandWindowDecorations} "\$@"
+    --enable-features=UseOzonePlatform \
+    --ozone-platform=wayland \
+    --class=Claude \
+    --name=Claude \
+    "$@"
 EOF
     chmod +x "$OUTPUT_DIR/bin/claude-desktop"
 }
